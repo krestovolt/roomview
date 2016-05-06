@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="//fast.eager.io/IV_om-T1Kd.js"></script>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<style>
+		#webgl-surface {
+			margin: 0px;
+			padding: 0px;
+			position: absolute;
+			z-index: auto;
+		}
+		#button-area1{
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			background-color:grey; 
+			width:100%; 
+			height:25px;
+			z-index: 1;
+			display: none;
+		}
+		#button-area2{
+			position: absolute;
+			bottom: 26px;
+			left: 0px;
+			background-color:grey; 
+			width:100%; 
+			height:25px;
+			z-index: 1;
+			display: none;
+		}
+		.alternative-key{
+			font-weight: bold;
+			font-size: 100%;
+			float: left;
+			padding-left: 10px;
+   			padding-right: 10px;
+			position: relative;
+			left: 10%;
+			width:15%; 
+			height:35px;
+			}
+		@media screen and (max-width:956px){
+			#button-area1{
+				display: none;
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				background-color:grey; 
+				width:100%; 
+				height:35px;
+				z-index: 1;
+			}
+			#button-area2{
+				position: absolute;
+				bottom: 36px;
+				left: 0px;
+				background-color:grey; 
+				width:100%; 
+				height:35px;
+				z-index: 1;
+				display: none;
+			}
+			.alternative-key{
+				font-weight: bold;
+				font-size: 100%;
+				float: left;
+				padding-left: 10px;
+   				padding-right: 10px;
+				position: relative;
+				left: 25%;
+				width:15%; 
+				height:35px;
+			}
+		}
+	</style>
+	<title>room</title>
+</head>
+<body onload="Init();">
+	<div id="button-area2">
+		<button id="rLeft" class="alternative-key">Rotate left</button>
+		<button id="forward" class="alternative-key">forward</button>
+		<button id="rRight" class="alternative-key">Rotate right</button>
+	</div>
+	<div id="button-area1">
+		<button id="left" class="alternative-key">left</button>		
+		<button id="back" class="alternative-key">back</button>
+		<button id="right" class="alternative-key">right</button>
+	</div>
+	<canvas id="webgl-surface">
+		<b>can't play with this browser...</b>
+	</canvas>
+	<script src="public/bower_components/async/dist/async.min.js"></script>
+	<script src="public/bower_components/gl-matrix/dist/gl-matrix-min.js"></script>
+                 
+	<script src="public/javascript/app.js"></script>
+	<script src="public/javascript/utility.js"></script>
+	<script src="public/javascript/models.js"></script>
+	<script src="public/javascript/scene.js"></script>
+</body>
+</html>
